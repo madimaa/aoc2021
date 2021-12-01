@@ -57,7 +57,7 @@ func Start() {
 
 //Elapsed - printf the elapsed time from Start
 func Elapsed() {
-	fmt.Printf("Runtime: %s\n", time.Now().Sub(startTime))
+	fmt.Printf("Runtime: %s\n", time.Since(startTime))
 }
 
 //ContainsInt - returns true if val exists in slice
