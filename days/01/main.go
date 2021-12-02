@@ -1,10 +1,8 @@
 package main
 
 import (
-	"bufio"
 	"fmt"
 	"os"
-	"strconv"
 
 	util "github.com/madimaa/aoc2021/util"
 )
@@ -13,19 +11,7 @@ func main() {
 	util.Start()
 	fmt.Println("Part 1")
 
-	file, err := os.Open("input.txt")
-	util.PanicOnError(err)
-
-	scanner := bufio.NewScanner(file)
-	input := make([]int, 0)
-	for scanner.Scan() {
-		number, err := strconv.Atoi(scanner.Text())
-		util.LogOnError(err)
-		input = append(input, number)
-	}
-
-	util.LogOnError(scanner.Err())
-	util.LogOnError(file.Close())
+	input := util.OpenFileAsIntArray("input.txt")
 
 	inc := 0
 	for i := 1; i < len(input); i++ {
