@@ -6,6 +6,7 @@ import (
 	"io/ioutil"
 	"log"
 	"os"
+	"strconv"
 	"time"
 )
 
@@ -34,6 +35,25 @@ func OpenFile(path string) []string {
 	fileContent := make([]string, 0)
 	for scanner.Scan() {
 		fileContent = append(fileContent, scanner.Text())
+	}
+
+	LogOnError(scanner.Err())
+	LogOnError(file.Close())
+
+	return fileContent
+}
+
+//OpenFile - Open file from path, return file content in string array/slice
+func OpenFileAsIntArray(path string) []int {
+	file, err := os.Open(path)
+	PanicOnError(err)
+
+	scanner := bufio.NewScanner(file)
+	fileContent := make([]int, 0)
+	for scanner.Scan() {
+		number, err := strconv.Atoi(scanner.Text())
+		LogOnError(err)
+		fileContent = append(fileContent, number)
 	}
 
 	LogOnError(scanner.Err())
