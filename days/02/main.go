@@ -10,10 +10,10 @@ import (
 )
 
 func main() {
+	input := util.OpenFile("input.txt")
+
 	util.Start()
 	fmt.Println("Part 1")
-
-	input := util.OpenFile("input.txt")
 	part1(input)
 	util.Elapsed()
 

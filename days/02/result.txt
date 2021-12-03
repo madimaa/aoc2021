@@ -1,6 +1,6 @@
 Part 1
 Result:  1990000
-Runtime: 1.0596ms
+Runtime: 528.8µs
 Part 2
 Result:  1975421260
-Runtime: 156.1µs
+Runtime: 511.6µs

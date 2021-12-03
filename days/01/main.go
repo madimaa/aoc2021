@@ -8,10 +8,10 @@ import (
 )
 
 func main() {
+	input := util.OpenFileAsIntArray("input.txt")
+
 	util.Start()
 	fmt.Println("Part 1")
-
-	input := util.OpenFileAsIntArray("input.txt")
 
 	inc := 0
 	for i := 1; i < len(input); i++ {
