@@ -1,0 +1,6 @@
+Part 1
+Result:  390011
+Runtime: 514.8µs
+Part 2
+Result:  1746710169834
+Runtime: 581.1µs
