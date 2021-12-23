@@ -1,0 +1,3 @@
+Part 1:  19503
+Part 2:  5200
+Runtime: 19.8352ms
