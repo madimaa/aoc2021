@@ -1,0 +1,6 @@
+Part 1
+Result:  3816
+Runtime: 45.5698ms
+Part 2
+Result:  4819
+Runtime: 756.4564ms
